@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880E39122300FA9D007640A3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880E39112300FA9D007640A3 /* MapKit.framework */; };
 		886172472300A81700DFA797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886172462300A81700DFA797 /* AppDelegate.swift */; };
 		886172492300A81700DFA797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886172482300A81700DFA797 /* ViewController.swift */; };
 		8861724C2300A81700DFA797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8861724A2300A81700DFA797 /* Main.storyboard */; };
 		8861724F2300A81700DFA797 /* Favourite_Places.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8861724D2300A81700DFA797 /* Favourite_Places.xcdatamodeld */; };
 		886172512300A81900DFA797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886172502300A81900DFA797 /* Assets.xcassets */; };
 		886172542300A81900DFA797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886172522300A81900DFA797 /* LaunchScreen.storyboard */; };
+		8861725C2300AB4700DFA797 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861725B2300AB4700DFA797 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880E39112300FA9D007640A3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		886172432300A81700DFA797 /* Favourite Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favourite Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		886172462300A81700DFA797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		886172482300A81700DFA797 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		886172502300A81900DFA797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		886172532300A81900DFA797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		886172552300A81900DFA797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8861725B2300AB4700DFA797 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880E39122300FA9D007640A3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880E39102300FA9D007640A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880E39112300FA9D007640A3 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8861723A2300A81700DFA797 = {
 			isa = PBXGroup;
 			children = (
 				886172452300A81700DFA797 /* Favourite Places */,
 				886172442300A81700DFA797 /* Products */,
+				880E39102300FA9D007640A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				886172462300A81700DFA797 /* AppDelegate.swift */,
-				886172482300A81700DFA797 /* ViewController.swift */,
 				8861724A2300A81700DFA797 /* Main.storyboard */,
 				886172502300A81900DFA797 /* Assets.xcassets */,
 				886172522300A81900DFA797 /* LaunchScreen.storyboard */,
 				886172552300A81900DFA797 /* Info.plist */,
 				8861724D2300A81700DFA797 /* Favourite_Places.xcdatamodeld */,
+				886172482300A81700DFA797 /* ViewController.swift */,
+				8861725B2300AB4700DFA797 /* HomeTableViewController.swift */,
 			);
 			path = "Favourite Places";
 			sourceTree = "<group>";
@@ -99,6 +114,11 @@
 				TargetAttributes = {
 					886172422300A81700DFA797 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8861725C2300AB4700DFA797 /* HomeTableViewController.swift in Sources */,
 				886172492300A81700DFA797 /* ViewController.swift in Sources */,
 				886172472300A81700DFA797 /* AppDelegate.swift in Sources */,
 				8861724F2300A81700DFA797 /* Favourite_Places.xcdatamodeld in Sources */,
